@@ -11,11 +11,14 @@ Content-Type: application/json
 GET http://localhost:3031/animal
 
 ###
-PUT  http://localhost:3031/animal/
+PUT  http://localhost:3031/animal/32c68062-cd0a-4485-b457-a211887149be
 Content-Type: application/json
 
 {
     "animalName" : "Sandro",
     "species" : "dog",
-    "adopted" : "not yet"
+    "adopted" : "yes"
 }
+
+###
+DELETE http://localhost:3031/animal/32c68062-cd0a-4485-b457-a211887149be

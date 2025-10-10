@@ -34,4 +34,11 @@ server.put('/animal/:id',(request, reply)=>{
 
 })
 
+server.delete('/animal/:id', (request, reply)=>{
+    const animalId = request.params.id
+    database.delete(animalId)
+
+    return reply.status(204).send()
+})
+
 server.listen({port:3031})
