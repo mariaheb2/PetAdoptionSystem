@@ -74,15 +74,16 @@ This project was created with the goal of learning how an **HTTP server with Fas
 
 ```
 AdoptionSystem/
-├── server.js
-├── routes/
-│   └── animal.routes.js
 ├── controllers/
 │   └── animal.controller.js
 ├── database/
 │   └── database-memory.js
+├── node_modules
+├── routes/
+│   └── animal.routes.js
 ├── package.json
 ├── routes.http
+├── server.js
 └── README.md
 ```
 
