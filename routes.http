@@ -1,0 +1,12 @@
+POST http://localhost:3031/animal
+Content-Type: application/json
+
+{
+    "animalName" : "Junior",
+    "species" : "dog",
+    "adopted" : "not yet"
+}
+
+###
+GET http://localhost:3031/animal
+

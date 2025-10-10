@@ -3,9 +3,9 @@ import { randomUUID } from 'node:crypto'
 export class DatabaseMemory{
     #animals = new Map()
 
-    create(animal) {
-        const animalId = ramdomUUID()
-        this.#animals.set(animalId, animal)
+    create( animalName, species, adopted ) {
+        const animalId = randomUUID()
+        this.#animals.set(animalId,  animalName, species, adopted)
     }
 
     update(id, animal){
@@ -17,6 +17,6 @@ export class DatabaseMemory{
     }
 
     list(){
-        this.#animals.values()
+        return Array.from(this.#animals.values())
     }
 }

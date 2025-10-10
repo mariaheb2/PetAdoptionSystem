@@ -4,17 +4,20 @@ import { DatabaseMemory } from './database-memory.js'
 const server = fastify()
 const database = new DatabaseMemory();
 
-server.get('/', () => {
-    return 'Hello puppy'
+server.get('/animal', (request, reply) => {
+    const animals = database.list()
+    return animals
 })
 
-server.post('/animal',()=>{
+server.post('/animal',(request, reply)=>{
+    const {animalName, species, adopted} = request.body
     database.create({
-        name: 'Junior',
-        species: 'Dog',
-        adopted: 'not yet'
+        animalName,
+        species,
+        adopted
     })
 
+    return reply.status(201).send()    
 
 })
 
