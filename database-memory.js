@@ -17,6 +17,14 @@ export class DatabaseMemory{
     }
 
     list(){
-        return Array.from(this.#animals.values())
+        return Array.from(this.#animals.entries()).map((animalArray) => {
+            const id = animalArray[0]
+            const data = animalArray[1]
+
+            return{
+                id,
+                ...data,
+            }
+        })
     }
 }

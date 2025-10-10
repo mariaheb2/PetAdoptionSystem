@@ -21,7 +21,16 @@ server.post('/animal',(request, reply)=>{
 
 })
 
-server.put('/animal/:id',()=>{
+server.put('/animal/:id',(request, reply)=>{
+    const animalId = request.params.id
+    const {animalName, species, adopted} = request.body
+    database.update(animalId, {
+        animalName,
+        species,
+        adopted
+    })
+
+    return reply.status(204).send
 
 })
 
