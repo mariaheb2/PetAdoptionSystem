@@ -1,24 +1,26 @@
+### POST new
 POST http://localhost:3031/animal
 Content-Type: application/json
 
 {
-    "animalName" : "Junior",
-    "species" : "dog",
-    "adopted" : "not yet"
+  "animalName": "Junior",
+  "species": "Dog",
+  "adopted": "not yet"
 }
 
-###
+### GET all
 GET http://localhost:3031/animal
 
-###
-PUT  http://localhost:3031/animal/32c68062-cd0a-4485-b457-a211887149be
+
+### PUT update
+PUT http://localhost:3031/animal/48727f60-83a8-4dee-9598-a2de8834034a
 Content-Type: application/json
 
 {
-    "animalName" : "Sandro",
-    "species" : "dog",
-    "adopted" : "yes"
+  "animalName": "Sandro",
+  "species": "Dog",
+  "adopted": "yes"
 }
 
-###
-DELETE http://localhost:3031/animal/32c68062-cd0a-4485-b457-a211887149be
+### DELETE
+DELETE http://localhost:3031/animal/48727f60-83a8-4dee-9598-a2de8834034a
