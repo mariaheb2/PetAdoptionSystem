@@ -51,13 +51,21 @@ This project was created with the goal of learning how an **HTTP server with Fas
 ## 🎯 What we learned
 
 ✅ How to create a server with Fastify
+
 ✅ How to create and register routes in an organized way
+
 ✅ How to structure a real Node.js project (layered architecture)
+
 ✅ How to manipulate data with `Map` (as if it were a mini database)
+
 ✅ How to create and consume RESTful endpoints
+
 ✅ How to validate data received in the request body
+
 ✅ How to separate responsibilities between server, routes, controllers, and database
+
 ✅ How to use ES Modules in Node (`import/export`)
+
 ✅ How to generate unique IDs with `randomUUID`
 
 ---
